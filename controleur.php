@@ -6,7 +6,7 @@ include 'controllers.php';
 // on lit une action en parametre
 // par defaut, 'list'
 $action = $_GET['action'] ?? 'list';
-$message=" ";
+$message="";
 switch ($action) {
     case "list":
         list_action($cont,$message);
@@ -24,7 +24,7 @@ switch ($action) {
        if (!empty($_GET['id']) and !empty($_GET['naissance'])
         and !empty($_GET['ville']))
 		     $res=patch_action($cont,$_GET['id'],$_GET['naissance'],$_GET['ville']);
-         if ($res)
+         if (!empty($res))
             $message = "Personne modifiée avec succès!";
          else
             $message = "Pb de modification";
