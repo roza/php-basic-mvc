@@ -19,9 +19,7 @@ function suppr_action($cont, $id){
 }
 
 function patch_action($cont, $id, $naissance, $ville){
-  if ($cont->patch($id,$naissance,$ville ))
-    echo "Personne $id modifiée avec succès !";
-  else echo "pb modification !";
+  return ($cont->patch($id,$naissance,$ville ));
 }
 
 function add_action($cont, $contact){

@@ -19,7 +19,12 @@ switch ($action) {
     case "patch":
        if (!empty($_GET['id']) and !empty($_GET['naissance'])
         and !empty($_GET['ville']))
-		     patch_action($cont,$_GET['id'],$_GET['naissance'],$_GET['ville']);
+		     $res=patch_action($cont,$_GET['id'],$_GET['naissance'],$_GET['ville']);
+         if ($res)
+            $_GET['message']="Personne modifiée avec succès!"
+         else
+            $_GET['message']="Pb de modification";
+         }
         break;
 	  case "add":
       if (add_action($cont, $_GET))
