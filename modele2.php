@@ -30,7 +30,7 @@ class Contacts {
 	  }
 
 	/** Ajouter un contact à la table CARNET */
-	function add_friends($data){
+	function add_friend($data){
 	  $sql="INSERT INTO CARNET(NOM,PRENOM,NAISSANCE,VILLE) values (?,?,?,?)";
 	  $stmt=self::$connexion->prepare($sql);
 	  return $stmt->execute(array($data['NOM'],
@@ -53,8 +53,7 @@ class Contacts {
 	  	$sql="Delete from CARNET where ID=:id";
 	  	$stmt=self::$connexion->prepare($sql);
 	  	$stmt->bindParam(':id', $id, PDO::PARAM_INT);
-	  	$stmt->execute();
-	  	return $stmt->fetch(PDO::FETCH_OBJ);
+	  	return $stmt->execute();
 	  }
 
 

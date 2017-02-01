@@ -23,3 +23,7 @@ function patch_action($cont, $id, $naissance, $ville){
     echo "Personne $id modifiée avec succès !";
   else echo "pb modification !";
 }
+
+function add_action($cont, $contact){
+  return ($cont->add_friend($contact ));
+}

@@ -22,8 +22,7 @@ switch ($action) {
 		     patch_action($cont,$_GET['id'],$_GET['naissance'],$_GET['ville']);
         break;
 	  case "add":
-      if ($cont->add_friend_by_id($cont, $_GET['nom'],$_GET['prenom'],
-        $_GET['naissance'],$_GET['ville']))
+      if (add_action($cont, $_GET))
 		  echo "Personne ".$_GET['nom']." ajoutée avec succès !";
 	    else echo "Pb d'ajout !";
       break;

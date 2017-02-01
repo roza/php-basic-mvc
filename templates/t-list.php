@@ -8,7 +8,7 @@ ob_start();
   <?php foreach ($amis as $ami): ?>
 	<tr>
 	<td>
-    <a href="recherche2.php?ID=<?php echo $ami['ID']; ?>" >
+    <a href="controleur.php?action=detail&id=<?php echo $ami['ID']; ?>" >
       <?php echo $ami['NOM']; ?>
   </a></td>
 	<td><?php echo $ami['PRENOM'] ?></td>
