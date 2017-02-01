@@ -24,7 +24,6 @@ a{
 	text-decoration:underline;
 }
 form{
-	background:#f7f7f7;
 	background:linear-gradient(90deg, #ccc, #fff);
 	border:1px solid #aaa;
 	border-radius:10px;
@@ -66,13 +65,10 @@ form p:hover label:after{
 }
 input[type=text],
 input[type=password]{
-	background: rgba(255, 255, 255, 0.9);
 	background:linear-gradient(90deg, #fff, #eee);
 	border:1px solid #aaa;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	-moz-box-shadow:0 0 3px #aaa;
-	-webkit-box-shadow:0 0 3px #aaa;
+	border-radius:3px;
+	box-shadow:0 0 3px #aaa;
 	padding:5px;
 }
 input[type=text]:focus,
