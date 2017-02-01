@@ -3,6 +3,7 @@ $title="Interrogation de  CARNET avec PDO";
 ob_start();
 // on démarre la bufferisation pour $content
 ?>
+
 <table class="centre" id="jolie">
 <tr> <td> Nom </td> <td> Prénom </td></tr>
   <?php foreach ($amis as $ami): ?>
@@ -15,6 +16,7 @@ ob_start();
 	</tr>
   <?php endforeach ?>
 </table>
+
 <?php
 	$content = ob_get_clean();
 	require 'baseLayout.php';

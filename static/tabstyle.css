@@ -27,3 +27,26 @@ table#jolie tr:nth-child(2n+3){
 table tr:only-child{
 	background:red;
 }
+form{
+	margin: auto;
+}
+.encadre{
+          margin: auto;
+          border: 5px solid gray;
+          background-color: BlanchedAlmond;
+          padding: 15px;
+          color: Crimson;
+          width: 35%;
+          text-align: center;
+          border-radius: 5px;
+          }
+.GrandeInitiale:first-letter { font-size: 300%; }
+
+footer {
+   position:absolute;
+   bottom:0;
+   width:75%;
+   height:15px;
+   background:aqua;
+	 margin: auto;
+}

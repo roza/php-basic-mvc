@@ -1,8 +1,7 @@
 <?php
 require_once 'modele2.php';
 
-
-function list_action($cont){
+function list_action($cont, $message){
   $amis = $cont->get_all_friends();
   require 'templates/t-list.php';
 }
@@ -13,9 +12,7 @@ function detail_action($cont, $id){
 }
 
 function suppr_action($cont, $id){
-  if ($cont->delete_friend_by_id($id))
-    echo "Personne supprimée avec succès !";
-  else echo "Pb de suppression !";
+  return ($cont->delete_friend_by_id($id));
 }
 
 function patch_action($cont, $id, $naissance, $ville){
@@ -23,5 +20,5 @@ function patch_action($cont, $id, $naissance, $ville){
 }
 
 function add_action($cont, $contact){
-  return ($cont->add_friend($contact ));
+  return ($cont->add_friend($contact));
 }
