@@ -15,9 +15,11 @@
 	<article>
 		<?php echo $content ?>
 	</article>
+	<?php if (!empty($message)) { ?>
 	<p class="encadre GrandeInitiale">
 	  <?php echo $message; ?>
 	</p>
+	<?php } ?>
 	<footer>
 		<h4>Copyright Les Pros du Web 2017</h4>
 	</footer>
