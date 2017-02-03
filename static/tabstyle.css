@@ -15,7 +15,7 @@ header, footer{
 		width: 69%;
 	}
 /* centrage du texte dans les cellules du tableau */
-table.centre td{text-align:center; color: Ivory;}
+table.centre td{text-align:center; color: Ivory; padding: 1% 0 1% 0;}
 
 table#jolie tr:first-child{
 	background:LightPink;
@@ -36,13 +36,13 @@ form{
 }
 
 .encadre{
-          margin: auto;
-          border: 5px solid gray;
-          background-color: BlanchedAlmond;
-          padding: 15px;
-          color: Crimson;
+          margin: 3% auto 0;
+          border: 1px solid gray;
+          background: linear-gradient(135deg, rgba(254,187,187,1) 0%,rgba(254,144,144,1) 45%,rgba(255,92,92,1) 100%);
+          padding: 1%;
+          color: Linen;
           width: 35%;
           text-align: center;
           border-radius: 5px;
           }
-.GrandeInitiale:first-letter { font-size: 300%; }
+.GrandeInitiale:first-letter { font-size: 150%; }
