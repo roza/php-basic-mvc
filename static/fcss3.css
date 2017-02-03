@@ -17,16 +17,15 @@ body{
 	line-height:16px;
 	text-shadow:0 1px 0 #fff;
 }
-a{
-	color:#333;
-	text-decoration:underline;
+a, a:visited{
+	color:BlanchedAlmond;
 }
 form{
 	background:linear-gradient(90deg, #ccc, #fff);
 	border:1px solid #aaa;
 	border-radius:10px;
 	box-shadow:0 0 15px #aaa;
-	margin:60px auto 0;
+	margin:3% auto 0;
 	padding:20px;
 	width:440px;
 }
@@ -166,4 +165,14 @@ font-weight: bold;
 
 label {
 font-style: italic;
+}
+
+footer {
+   position:absolute;
+   bottom:2%;
+   width:75%;
+   height:15px;
+   background: linear-gradient(to bottom,  #a7c7dc 0%,#85b2d3 100%);
+	 text-align: center;
+	 border-radius: 6px;
 }

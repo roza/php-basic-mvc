@@ -10,7 +10,7 @@
 </head>
 <body>
 	<header>
-		<h2>Mes contacts</h2>
+		<h1>Mes contacts</h1>
 	</header>
 	<article>
 		<?php echo $content ?>

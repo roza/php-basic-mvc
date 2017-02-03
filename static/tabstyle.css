@@ -9,16 +9,20 @@ header, footer{
 	table{border-collapse:collapse;}
 	/* Centrage tableau */
 	table.centre{
-		margin:auto;
+		margin-left:auto;
+		margin-right:auto;
+		margin-top: 3%;
+		width: 69%;
 	}
 /* centrage du texte dans les cellules du tableau */
-table.centre td{text-align:center;}
+table.centre td{text-align:center; color: Ivory;}
 
 table#jolie tr:first-child{
 	background:LightPink;
 }
 table#jolie tr:nth-child(2n){
-	background:#EFD3C9;
+	background: linear-gradient(135deg, rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%);
+	/* background:#EFD3C9; */
 }
 table#jolie tr:nth-child(2n+3){
 	background:#BCBCD0;
@@ -30,6 +34,7 @@ table tr:only-child{
 form{
 	margin: auto;
 }
+
 .encadre{
           margin: auto;
           border: 5px solid gray;
@@ -41,12 +46,3 @@ form{
           border-radius: 5px;
           }
 .GrandeInitiale:first-letter { font-size: 300%; }
-
-footer {
-   position:absolute;
-   bottom:0;
-   width:75%;
-   height:15px;
-   background:aqua;
-	 margin: auto;
-}
