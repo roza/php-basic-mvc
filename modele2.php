@@ -33,8 +33,8 @@ class Contacts {
 	function add_friend($data){
 	  $sql="INSERT INTO CARNET(NOM,PRENOM,NAISSANCE,VILLE) values (?,?,?,?)";
 	  $stmt=self::$connexion->prepare($sql);
-	  return $stmt->execute(array($data['NOM'],
-	    $data['PRENOM'], $data['NAISSANCE'],$data['VILLE']));
+	  return $stmt->execute(array($data['nom'],
+	    $data['prenom'], $data['naissance'],$data['ville']));
 	  }
 
 	/** Récupérer un contact à partir de son ID */

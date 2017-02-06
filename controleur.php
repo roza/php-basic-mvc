@@ -31,7 +31,7 @@ switch ($action) {
         list_action($cont,$message);
         break;
 	  case "add":
-      if (add_action($cont,$message, $_GET))
+      if (add_action($cont, $_GET))
 		       $message = "Personne ".$_GET['nom']." ajoutée avec succès !";
 	    else $message = "Pb d'ajout de la personne!";
       list_action($cont,$message);
