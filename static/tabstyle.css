@@ -39,10 +39,10 @@ form{
           margin: 3% auto 0;
           border: 1px solid gray;
           background: linear-gradient(135deg, rgba(254,187,187,1) 0%,rgba(254,144,144,1) 45%,rgba(255,92,92,1) 100%);
-          padding: 1%;
+          padding: 5%;
           color: Linen;
-          width: 35%;
           text-align: center;
           border-radius: 5px;
+					display: table-row;
           }
 .GrandeInitiale:first-letter { font-size: 150%; }

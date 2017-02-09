@@ -16,6 +16,8 @@ body{
 	font-size:12px;
 	line-height:16px;
 	text-shadow:0 1px 0 #fff;
+	display : table;
+	width: 100%;
 }
 a, a:visited{
 	color:BlanchedAlmond;
@@ -150,7 +152,8 @@ a.submit:focus{
 
 
 body {
-width: 75%;
+display: table;
+width: 80%;
 margin-left: auto;
 margin-right: auto;
 font-size: 10pt;
@@ -168,11 +171,9 @@ font-style: italic;
 }
 
 footer {
-   position:absolute;
-   bottom:2%;
-   width:75%;
-   height:15px;
-   background: linear-gradient(to bottom,  #a7c7dc 0%,#85b2d3 100%);
-	 text-align: center;
-	 border-radius: 6px;
+	display : table-row;
+ 	height: 60px;
+  background: linear-gradient(to bottom,  #a7c7dc 0%,#85b2d3 100%);
+	text-align: center;
+	border-radius: 6px;
 }
