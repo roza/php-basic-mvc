@@ -1,7 +1,4 @@
-header, footer{
-	margin: auto;
-	text-align: center;
-}
+
 
 	/* Bordure simple autour des tableaux */
 	table,th, td { border: 1px solid grey;}
@@ -31,18 +28,3 @@ table#jolie tr:nth-child(2n+3){
 table tr:only-child{
 	background:red;
 }
-form{
-	margin: auto;
-}
-
-.encadre{
-          margin: 3% auto 0;
-          border: 1px solid gray;
-          background: linear-gradient(135deg, rgba(254,187,187,1) 0%,rgba(254,144,144,1) 45%,rgba(255,92,92,1) 100%);
-          padding: 5%;
-          color: Linen;
-          text-align: center;
-          border-radius: 5px;
-					display: table-row;
-          }
-.GrandeInitiale:first-letter { font-size: 150%; }
