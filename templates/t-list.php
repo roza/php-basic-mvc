@@ -23,7 +23,7 @@ ob_start();
 <section id="ajout">
 <form id="add" action="controleur.php">
   <fieldset>
-    <legend><?php $ami->NOM ?></legend>
+    <legend>Nouveau contact</legend>
     <input type="hidden" name="action" value="add">
     <p> <label for="nom">NOM:</label>
   <input type="text" name="nom">
