@@ -23,9 +23,30 @@ body{
 	display : table;
 	width: 100%;
 }
+
 a, a:visited{
 	color:BlanchedAlmond;
 }
+
+.encadre{
+          margin: 3% auto 0;
+          border: 1px solid gray;
+          background: linear-gradient(135deg, rgba(254,187,187,1) 0%,rgba(254,144,144,1) 45%,rgba(255,92,92,1) 100%);
+          padding: 5%;
+          color: Linen;
+          text-align: center;
+          border-radius: 5px;
+					display: table-row;
+          }
+					
+.GrandeInitiale:first-letter { font-size: 150%; }
+
+header, footer{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
 form{
 	background:linear-gradient(90deg, #ccc, #fff);
 	border:1px solid #aaa;
