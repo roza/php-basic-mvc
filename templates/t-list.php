@@ -20,6 +20,7 @@ ob_start();
 	</tr>
   <?php endforeach ?>
 </table>
+<input type="button"  id="addbutt" value="Ajouter" onclick="afficher()"/>
 <section id="ajout">
 <form id="add" action="controleur.php">
   <fieldset>
@@ -38,6 +39,7 @@ ob_start();
 </fieldset>
 </form>
 </section>
+<script>afficher()</script>
 <?php
 	$content = ob_get_clean();
 	require 'baseLayout.php';
