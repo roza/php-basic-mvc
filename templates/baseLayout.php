@@ -7,6 +7,19 @@
 	</title>
 	<link rel="stylesheet" href="static/tabstyle.css" />
 	<link rel="stylesheet" href="static/fcss3.css" />
+	<script>
+	function afficher(){
+		section = document.getElementById('ajout');
+		bouton  = document.getElementById('addbutt');
+		if (section.hidden){
+			bouton.value='Masquer';
+		}
+		else{
+			bouton.value='Ajouter';
+		}
+		section.hidden=!section.hidden;
+	}
+	</script>
 </head>
 <body>
 	<header>
