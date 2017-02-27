@@ -23,7 +23,7 @@ switch ($action) {
        if (suppr_action($cont, $_GET['id']))
             $message = "Personne supprimée avec succès !";
        else $message = "Pb de suppression !";
-       list_action($cont,$message);
+       list_action($cont,$twig,$message);
        break;
     case "patch":
        if (!empty($_GET['id']) and !empty($_GET['naissance'])
