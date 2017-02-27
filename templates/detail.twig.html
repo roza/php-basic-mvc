@@ -1,0 +1,26 @@
+{% extends "BaseTemplate.html" %}
+{% block title %}Détail de {{ami.ID}} {% endblock %}
+
+
+{% block content %}
+
+<h2>{{titre}}</h2>
+<form id="fdetail" action="controleur.php">
+  <fieldset>
+    <legend>{{ami.NOM}}</legend>
+    <input type="hidden" name="action" value="patch">
+    <input type="hidden" name="id" value="{{ami.ID}}">
+    <p> <label for="nom">NOM:</label>
+  <input type="text" name="nom" value="{{ami.NOM}}">
+  <p> <label for="prenom">PRENOM:</label>
+  <input type="text" value="{{ami.PRENOM}}">
+  <p> <label for="naissance">NAISSANCE:</label>
+  <input type="text" name="naissance" value="{{ami.NAISSANCE}}">
+  <p> <label for="ville">NOM:VILLE:</label>
+  <input type="text" name="ville" value="{{ami.VILLE}}">
+  <p>
+  <input type="submit" value="modifier">
+</fieldset>
+</form>
+
+{% endblock %}

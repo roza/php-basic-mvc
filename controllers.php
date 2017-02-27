@@ -1,14 +1,26 @@
 <?php
 require_once 'modele2.php';
 
-function list_action($cont, $message){
+function list_action($cont,$twig, $message){
   $amis = $cont->get_all_friends();
-  require 'templates/t-list.php';
+  $template = $twig->loadTemplate('carnet.twig.html');
+  $titre="My Contacts";
+  echo $template->render(array(
+            'titre' => $titre,
+            'amis' => $amis,
+            'message' => $message
+            ));
 }
 
-function detail_action($cont, $id){
+function detail_action($cont,$twig, $id){
   $ami = $cont->get_friend_by_id($id);
-  require 'templates/t-detail.php';
+  $template = $twig->loadTemplate('detail.twig.html');
+  $titre="Détails";
+  echo $template->render(array(
+            'titre' => $titre,
+            'ami' => $ami,
+            'message' => $message
+            ));
 }
 
 function suppr_action($cont, $id){

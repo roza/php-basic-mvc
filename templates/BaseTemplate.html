@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	 {% block head %}
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="static/fcss3.css" />
+    <title>
+    {% block title %}{% endblock %}
+    </title>
+    {% endblock %}
+</head>
+<body>
+	<header>
+		<h1>Mes contacts</h1>
+	</header>
+	<article>
+	{% block content %}{% endblock %}
+	</article>
+	{% if message is not empty %}
+	<p class="encadre GrandeInitiale">
+	  {{ message }}
+	</p>
+	{% endif %}
+
+<footer>
+    {% block footer %}
+    &copy; Copyright 2017
+    <a href="http://universite-orleans.fr/iut_orleans/informatique/">
+    IUT Orléans</a>.
+    {% endblock %}
+</footer>
+</body>
+</html>
