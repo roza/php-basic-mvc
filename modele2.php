@@ -1,8 +1,8 @@
 <?php
 require("connect.php");
 
-/** Classe de gestion des contacts servant de modèle à notre application avec
-    des méthodes de type CRUD
+/** Classe de gestion des contacts servant de modèle
+*   à notre application avec des méthodes de type CRUD
 */
 class Contacts {
 	/** Objet contenant la connexion pdo à la BD */
@@ -22,22 +22,22 @@ class Contacts {
     }
 	}
 
-	/** Récupérer la liste des contacts sous forme d'un tableau */
+	/** Récupére la liste des contacts sous forme d'un tableau */
 	function get_all_friends(){
 	  $sql="SELECT * from CARNET";
 	  $data=self::$connexion->query($sql);
 	  return $data;
 	  }
 
-	/** Ajouter un contact à la table CARNET */
+	/** Ajoute un contact à la table CARNET */
 	function add_friend($data){
-	  $sql="INSERT INTO CARNET(NOM,PRENOM,NAISSANCE,VILLE) values (?,?,?,?)";
-	  $stmt=self::$connexion->prepare($sql);
+	  $sql = "INSERT INTO CARNET(NOM,PRENOM,NAISSANCE,VILLE) values (?,?,?,?)";
+	  $stmt = self::$connexion->prepare($sql);
 	  return $stmt->execute(array($data['nom'],
 	    $data['prenom'], $data['naissance'],$data['ville']));
 	  }
 
-	/** Récupérer un contact à partir de son ID */
+	/** Récupére un contact à partir de son ID */
 	function get_friend_by_id($id)
 	{
 	  $sql="SELECT * from CARNET where ID=:id";
@@ -47,7 +47,7 @@ class Contacts {
 	  return $stmt->fetch(PDO::FETCH_OBJ);
 	 }
 
-	/** Effacer un contact à partir de son ID */
+	/** Efface un contact à partir de son ID */
 	function delete_friend_by_id($id)
 	  {
 	  	$sql="Delete from CARNET where ID=:id";
@@ -57,7 +57,7 @@ class Contacts {
 	  }
 
 
-	/** Mise à jour d'une personne avec sa date de naissance et sa ville */
+	/** Met jour d'une personne avec sa date de naissance et sa ville */
 	function patch($id, $naissance, $ville)
 	{
 	 	$sql = "UPDATE `CARNET` SET `NAISSANCE` = :naissance, `VILLE` = :ville
@@ -69,7 +69,7 @@ class Contacts {
 	 	return $stmt->execute();
 	}
 
-    /** Mise à jour d'une personne avec son nom, son prénom,
+    /** Met à jour d'une personne avec son nom, son prénom,
      *  sa date de naissance et sa ville */
     function update($id, $nom, $prenom, $naissance, $ville)
 	{
