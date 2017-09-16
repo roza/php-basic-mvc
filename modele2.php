@@ -79,11 +79,11 @@ class Contacts {
                 SET `VILLE` = :ville
 	 	        WHERE `CARNET`.`ID` = :id";
 	 	$stmt = self::$connexion->prepare($sql);
-    $stmt->bindParam(':nom', $nom);
-    $stmt->bindParam(':prenom', $prenom);
+        $stmt->bindParam(':nom', $nom);
+        $stmt->bindParam(':prenom', $prenom);
 	 	$stmt->bindParam(':naissance', $naissance);
 	 	$stmt->bindParam(':ville', $ville);
 	 	$stmt->bindParam(':id', $id);
 	 	return $stmt->execute();
 	}
-};
+}
