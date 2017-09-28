@@ -73,17 +73,17 @@ class Contacts {
      *  sa date de naissance et sa ville */
     function update($id, $nom, $prenom, $naissance, $ville)
 	{
-	 	$sql = "UPDATE `CARNET `SET `NOM` = :nom,
+	 	 $sql = "UPDATE `CARNET `SET `NOM` = :nom,
                 SET `PRENOM` = :prenom,
                 SET `NAISSANCE` = :naissance,
                 SET `VILLE` = :ville
 	 	        WHERE `CARNET`.`ID` = :id";
-	 	$stmt = self::$connexion->prepare($sql);
-        $stmt->bindParam(':nom', $nom);
-        $stmt->bindParam(':prenom', $prenom);
-	 	$stmt->bindParam(':naissance', $naissance);
-	 	$stmt->bindParam(':ville', $ville);
-	 	$stmt->bindParam(':id', $id);
-	 	return $stmt->execute();
+	 	 $stmt = self::$connexion->prepare($sql);
+     $stmt->bindParam(':nom', $nom);
+     $stmt->bindParam(':prenom', $prenom);
+	 	 $stmt->bindParam(':naissance', $naissance);
+	 	 $stmt->bindParam(':ville', $ville);
+	 	 $stmt->bindParam(':id', $id);
+	 	 return $stmt->execute();
 	}
 }
