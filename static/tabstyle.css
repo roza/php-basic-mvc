@@ -12,13 +12,13 @@
 		width: 69%;
 	}
 /* centrage du texte dans les cellules du tableau */
-table.centre td{text-align:center; color: Ivory; padding: 1% 0 1% 0;}
+table.centre td{text-align:center; color: Ivory; padding: 5px;}
 
 table#jolie tr:first-child{
 	background:LightPink;
 }
 table#jolie tr:nth-child(2n){
-	background: linear-gradient(135deg, rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%);
+	background:rgba(35,83,138,1);
 	/* background:#EFD3C9; */
 }
 table#jolie tr:nth-child(2n+3){

@@ -12,7 +12,7 @@ function list_action($cont,$twig, $message){
             ));
 }
 
-function detail_action($cont,$twig, $id){
+function detail_action($cont,$twig, $id,$message=''){
   $ami = $cont->get_friend_by_id($id);
   $template = $twig->loadTemplate('detail.twig.html');
   $titre="Détails";
