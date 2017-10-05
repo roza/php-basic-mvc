@@ -12,8 +12,8 @@ class Contacts {
 	function __construct(){
     $dsn="mysql:dbname=".BASE.";host=".SERVER;
     try{
-      self::$connexion=new PDO($dsn,USER,PASSWD,
-        array(PDO::ATTR_PERSISTENT =>true)
+			self::$connexion=new PDO($dsn,USER,PASSWD
+			// ,array(PDO::ATTR_PERSISTENT =>true)
         );
     }
     catch(PDOException $e){
