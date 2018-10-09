@@ -11,11 +11,14 @@
     <input type="hidden" name="action" value="patch">
     <input type="hidden" name="id" value="{{ami.ID}}">
     <p> <label for="nom">NOM:</label>
-  <input type="text" name="nom" value="{{ami.NOM}}">
+  <input type="text" name="nom" 
+  value="{{ami.NOM}}" required 
+  pattern="[A-Za-z]{2,22}" 
+  title="Entrez un nom avec au moins 2 caratères et max 22">
   <p> <label for="prenom">PRENOM:</label>
   <input type="text" value="{{ami.PRENOM}}">
   <p> <label for="naissance">NAISSANCE:</label>
-  <input type="text" name="naissance" value="{{ami.NAISSANCE}}">
+  <input type="date" name="naissance" value="{{ami.NAISSANCE}}">
   <p> <label for="ville">VILLE:</label>
   <input type="text" name="ville" value="{{ami.VILLE}}">
   <p>

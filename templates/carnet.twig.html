@@ -33,6 +33,16 @@
     </td>
   </tr>
   {% endfor %}
+  <tr>
+    <form method="GET" action="controleur.php">
+      <td><input type="hidden" name="action" value="add"></td>
+      <td><input type="text" name="nom" required></td>
+      <td><input type="text" name="prenom" required></td>
+      <td><input type="date" name="naissance" required></td>
+      <td><input type="text" name="ville"></td>
+      <td><input type="submit" value="+"></td>
+    </form>
+  </tr>
 </table>
 
 {% endblock %}

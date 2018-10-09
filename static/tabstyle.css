@@ -24,6 +24,11 @@ table#jolie tr:nth-child(2n){
 table#jolie tr:nth-child(2n+3){
 	background:#BCBCD0;
 }
+
+table#jolie tr:last-child{
+	background:#09AA0E;
+}
+
 /* si un tableau a une seule ligne on l'affiche en rouge */
 table tr:only-child{
 	background:red;
