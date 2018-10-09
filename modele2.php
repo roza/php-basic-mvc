@@ -9,12 +9,11 @@ class Contacts {
 	private static $connexion;
 
 	/** Constructeur établissant la connexion */
-	function __construct(){
+	function __construct()
+	{
     $dsn="mysql:dbname=".BASE.";host=".SERVER;
     try{
-			self::$connexion=new PDO($dsn,USER,PASSWD
-			// ,array(PDO::ATTR_PERSISTENT =>true)
-        );
+			self::$connexion=new PDO($dsn,USER,PASSWD);
     }
     catch(PDOException $e){
       printf("Échec de la connexion : %s\n", $e->getMessage());
@@ -23,19 +22,21 @@ class Contacts {
 	}
 
 	/** Récupére la liste des contacts sous forme d'un tableau */
-	function get_all_friends(){
+	function get_all_friends()
+	{
 	  $sql="SELECT * from CARNET";
 	  $data=self::$connexion->query($sql);
 	  return $data;
-	  }
+	}
 
 	/** Ajoute un contact à la table CARNET */
-	function add_friend($data){
+	function add_friend($data)
+	{
 	  $sql = "INSERT INTO CARNET(NOM,PRENOM,NAISSANCE,VILLE) values (?,?,?,?)";
 	  $stmt = self::$connexion->prepare($sql);
 	  return $stmt->execute(array($data['nom'],
 	    $data['prenom'], $data['naissance'],$data['ville']));
-	  }
+	}
 
 	/** Récupére un contact à partir de son ID */
 	function get_friend_by_id($id)
