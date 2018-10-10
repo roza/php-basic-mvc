@@ -1,5 +1,5 @@
 <?php
-require_once 'modele2.php';
+require_once 'models/modele2.php';
 $cont = new Contacts;
 include 'vendor/autoload.php';
 // le dossier ou on trouve les templates

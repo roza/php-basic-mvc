@@ -1,5 +1,5 @@
 <?php
-require_once 'modele2.php';
+require_once 'models/modele2.php';
 
 function list_action($cont,$twig, $message){
   $amis = $cont->get_all_friends();
