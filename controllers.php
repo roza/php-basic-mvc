@@ -3,7 +3,7 @@ require_once 'models/modele2.php';
 
 function list_action($cont,$twig, $message){
   $amis = $cont->get_all_friends();
-  $template = $twig->loadTemplate('carnet.twig.html');
+  $template = $twig->load('carnet.twig.html');
   $titre="My Contacts";
   echo $template->render(array(
             'titre' => $titre,
@@ -14,7 +14,7 @@ function list_action($cont,$twig, $message){
 
 function detail_action($cont,$twig, $id,$message=''){
   $ami = $cont->get_friend_by_id($id);
-  $template = $twig->loadTemplate('detail.twig.html');
+  $template = $twig->load('detail.twig.html');
   $titre="Détails";
   echo $template->render(array(
             'titre' => $titre,

@@ -3,9 +3,9 @@ require_once 'models/modele2.php';
 $cont = new Contacts;
 include 'vendor/autoload.php';
 // le dossier ou on trouve les templates
-$loader = new Twig_Loader_Filesystem('templates');
+$loader = new Twig\Loader\FilesystemLoader('templates');
 // initialiser l'environement Twig
-$twig = new Twig_Environment($loader);
+$twig = new Twig\Environment($loader);
 
 include 'controllers.php';
 // on lit une action en parametre
